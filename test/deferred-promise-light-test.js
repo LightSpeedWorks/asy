@@ -69,9 +69,11 @@ sleep(100).then(function () {
     readTextFile('b.txt'),
     readTextFile('c.txt'));
 })
-.then(function (res) {
-  res = res.map(function (val) { return val.trim(); });
-  console.log(tm(), 'when', res);
+.then(function (res1, res2, res3) {
+  res1 = res1.trim();
+  res2 = res2.trim();
+  res3 = res3.trim();
+  console.log(tm(), 'when', res1, res2, res3);
   return random();
 })
 .then(function (res) {
