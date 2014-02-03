@@ -64,6 +64,10 @@ sleep(100).then(function () {
 })
 .then(function (res) {
   console.log(tm(), 'sleep', res);
+  return when();
+})
+.then(function (res) {
+  console.log(tm(), 'when', res);
   return when(
     readTextFile('a.txt'),
     readTextFile('b.txt'),
