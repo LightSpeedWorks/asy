@@ -42,7 +42,7 @@ function readTextFile(file) {
 }
 
 console.log(tm(), 'bmk start');
-for (var i = 0; i < 1000; ++i) {
+for (var i = 0; i < 10000; ++i) {
   ok('OK').then(function (res) {},
                 function (err) {});
   ng('NG').then(function (res) {},
