@@ -4,15 +4,13 @@
 
 var dfdModule = Math.random() < 0.5 ? 'deferred-promise-light': 'deferred-promise-closure';
 console.log(dfdModule);
-var DeferredPromise = require('../lib/' + dfdModule);
-
-var Deferred  = DeferredPromise.Deferred;
-var Promise   = DeferredPromise.Promise;
-var isPromise = DeferredPromise.isPromise;
-var when      = DeferredPromise.when;
-var sleep     = DeferredPromise.sleep;
-var ok        = DeferredPromise.ok;
-var ng        = DeferredPromise.ng;
+var Deferred = require('../lib/' + dfdModule);
+var Promise   = Deferred.Promise;
+var isPromise = Deferred.isPromise;
+var when      = Deferred.when;
+var sleep     = Deferred.sleep;
+var ok        = Deferred.ok;
+var ng        = Deferred.ng;
 
 if (!Deferred)  throw new Error('Deferred not defined');
 if (!Promise)   throw new Error('Promise not defined');

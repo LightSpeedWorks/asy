@@ -1,12 +1,10 @@
 'use strict';
 
-var co = require('../lib/co-light').co;
-var thunkify = require('../lib/co-light').thunkify;
-co.sleep = require('../lib/co-light').sleep;
+var co = require('../lib/co-light');
+var thunkify = co.thunkify;
 
-var Deferred = require('../lib/deferred-promise-light').Deferred;
-//var Promise = require('../lib/deferred-promise-light').Promise;
-Deferred.sleep = require('../lib/deferred-promise-light').sleep;
+var Deferred = require('../lib/deferred-promise-light');
+//var Promise = Deferred.Promise;
 
 //var fs = require('co-fs');
 var fs = require('fs');
