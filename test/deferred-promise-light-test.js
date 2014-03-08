@@ -2,15 +2,17 @@
 
 'use strict';
 
-var DeferredPromiseLight = require('../lib/deferred-promise-light');
+var dfdModule = Math.random() < 0.5 ? 'deferred-promise-light': 'deferred-promise-closure';
+console.log(dfdModule);
+var DeferredPromise = require('../lib/' + dfdModule);
 
-var Deferred  = DeferredPromiseLight.Deferred;
-var Promise   = DeferredPromiseLight.Promise;
-var isPromise = DeferredPromiseLight.isPromise;
-var when      = DeferredPromiseLight.when;
-var sleep     = DeferredPromiseLight.sleep;
-var ok        = DeferredPromiseLight.ok;
-var ng        = DeferredPromiseLight.ng;
+var Deferred  = DeferredPromise.Deferred;
+var Promise   = DeferredPromise.Promise;
+var isPromise = DeferredPromise.isPromise;
+var when      = DeferredPromise.when;
+var sleep     = DeferredPromise.sleep;
+var ok        = DeferredPromise.ok;
+var ng        = DeferredPromise.ng;
 
 if (!Deferred)  throw new Error('Deferred not defined');
 if (!Promise)   throw new Error('Promise not defined');
