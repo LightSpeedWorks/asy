@@ -18,16 +18,16 @@ co(function *() {
   yield co.sleep(100);
   console.log('co sleep 3');
 
-  var a = yield co.fs.readFile('a.txt');
-  console.log('a.txt =', a.toString().trim());
-  var b = yield co.fs.readFile('b.txt');
-  console.log('b.txt =', b.toString().trim());
-  var c = yield co.fs.readFile('c.txt');
-  console.log('c.txt =', c.toString().trim());
+  var a = yield co.fs.readFile('test-a.txt');
+  console.log('test-a.txt =', a.toString().trim());
+  var b = yield co.fs.readFile('test-b.txt');
+  console.log('test-b.txt =', b.toString().trim());
+  var c = yield co.fs.readFile('test-c.txt');
+  console.log('test-c.txt =', c.toString().trim());
 
-  var a1 = co.fs.readFile('a.txt');
-  var b1 = co.fs.readFile('b.txt');
-  var c1 = co.fs.readFile('c.txt');
+  var a1 = co.fs.readFile('test-a.txt');
+  var b1 = co.fs.readFile('test-b.txt');
+  var c1 = co.fs.readFile('test-c.txt');
   var res = yield [a1, b1, c1];
   for (var i in res)
     res[i] = res[i].toString().trim();
@@ -42,9 +42,9 @@ co(function *() {
   var res = yield {};
   console.log('res =', res);
 
-  var a2 = co.fs.readFile('a.txt');
-  var b2 = co.fs.readFile('b.txt');
-  var c2 = co.fs.readFile('c.txt');
+  var a2 = co.fs.readFile('test-a.txt');
+  var b2 = co.fs.readFile('test-b.txt');
+  var c2 = co.fs.readFile('test-c.txt');
   var res = yield {a:a2, b:b2, c:c2};
   for (var i in res)
     res[i] = res[i].toString().trim();

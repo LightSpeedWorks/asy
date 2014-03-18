@@ -69,9 +69,9 @@ sleep(100).then(function () {
 .then(function (res) {
   console.log(tm(), 'when', res);
   return when(
-    readTextFile('a.txt'),
-    readTextFile('b.txt'),
-    readTextFile('c.txt'));
+    readTextFile('test-a.txt'),
+    readTextFile('test-b.txt'),
+    readTextFile('test-c.txt'));
 })
 .then(function (res1, res2, res3) {
   res1 = res1.trim();
@@ -87,17 +87,17 @@ sleep(100).then(function () {
 })
 .then(function (res) {
   console.log(tm(), 'read: start');
-  return readTextFile('a.txt');
+  return readTextFile('test-a.txt');
 })
 .then(function (res) {
-  console.log(tm(), 'read: a.txt =', res.trim());
-  return readTextFile('b.txt');
+  console.log(tm(), 'read: test-a.txt =', res.trim());
+  return readTextFile('test-b.txt');
 })
 .then(function (res) {
-  console.log(tm(), 'read: b.txt =', res.trim());
-  return readTextFile('c.txt');
+  console.log(tm(), 'read: test-b.txt =', res.trim());
+  return readTextFile('test-c.txt');
 }).then(function (res) {
-  console.log(tm(), 'read: c.txt =', res.trim());
+  console.log(tm(), 'read: test-c.txt =', res.trim());
   return 'OK';
 }).then(function (res) {
   console.log(tm(), 'last =', res);

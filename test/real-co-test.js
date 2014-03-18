@@ -48,17 +48,17 @@ function readTextFileTrimAsync(file) {
 }
 
 co(function *main() {
-  //var a = yield asy.fs.readFile('a.txt');
-  //var b = yield asy.fs.readFile('b.txt');
-  //var c = yield asy.fs.readFile('c.txt');
-  var a = yield readTextFileTrimAsync('a.txt');
-  var b = yield readTextFileTrimAsync('b.txt');
-  var c = yield readTextFileTrimAsync('c.txt');
+  //var a = yield asy.fs.readFile('test-a.txt');
+  //var b = yield asy.fs.readFile('test-b.txt');
+  //var c = yield asy.fs.readFile('test-c.txt');
+  var a = yield readTextFileTrimAsync('test-a.txt');
+  var b = yield readTextFileTrimAsync('test-b.txt');
+  var c = yield readTextFileTrimAsync('test-c.txt');
   console.log(a, b, c);
 
-  var res = yield [readTextFileTrimAsync('a.txt'),
-                   readTextFileTrimAsync('b.txt'),
-                   readTextFileTrimAsync('c.txt')];
+  var res = yield [readTextFileTrimAsync('test-a.txt'),
+                   readTextFileTrimAsync('test-b.txt'),
+                   readTextFileTrimAsync('test-c.txt')];
   console.log(res);
 })(function (err, data) { console.log('end of co', err, data); });
 
