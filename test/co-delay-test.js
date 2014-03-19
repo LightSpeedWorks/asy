@@ -3,6 +3,7 @@
 var inspect = require('util').inspect;
 var slice = Array.prototype.slice;
 var co = require('../lib/co-light');
+// var co = require('co'); // for compare {オリジナルとの比較用}
 
 function delay(ms) {
   return function (cb) {
@@ -19,26 +20,26 @@ function delayError(ms) {
 }
 
 co(function*() {
-  console.log('co1');
-  yield delay(1000);
-  console.log('co2');
-  yield delay(1000);
-  console.log('co3');
-})(function () {
-  console.log('done', inspect(slice.call(arguments), {colors: true}));
+  console.log('co11');
+  yield delay(500);
+  console.log('co12');
+  yield delay(500);
+  console.log('co13');
+})(function (err, res) {
+  console.log('co1X done:', {err: err, res: res});
 
   co(function*() {
-    console.log('co1');
-    yield delay(1000);
-    console.log('co2');
+    console.log('co21');
+    yield delay(500);
+    console.log('co22');
     try {
-      yield delayError(1000);
+      yield delayError(500);
     } catch(err) {
-      console.log('co2 -> ' + err);
+      console.log('co22 -> ' + err);
     }
-    console.log('co3');
-  })(function () {
-    console.log('done', inspect(slice.call(arguments), {colors: true}));
+    console.log('co23');
+  })(function (err, res) {
+    console.log('co2X done:', {err: err, res: res});
   });
 
 });
