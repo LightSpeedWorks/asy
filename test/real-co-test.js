@@ -60,5 +60,7 @@ co(function *main() {
                    readTextFileTrimAsync('test-b.txt'),
                    readTextFileTrimAsync('test-c.txt')];
   console.log(res);
-})(function (err, data) { console.log('end of co', err, data); });
+}).then(
+  function (res) { console.log('end of co res:', res); },
+  function (err) { console.log('end of co err:', err); });
 
