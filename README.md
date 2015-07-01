@@ -18,10 +18,10 @@ var thunkify = asy.thunkify;
 var fs = require('fs');
 var read = thunkify(fs.readFile);
 
-fs.readFile('test-a.txt', function (err, res) {});
-read('test-a.txt')(function (err, res) {});
+fs.readFile('README.md', function (err, res) {});
+read('README.md')(function (err, res) {});
 
 asy(function*() {
-  var buf = yield read('test-a.txt');
+  var buf = yield read('README.md');
 });
 ```
