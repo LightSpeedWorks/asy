@@ -1,19 +1,19 @@
-asy - Asynchronous, Deferred/Promise, co(coroutine), light library
+asy - async await library
 ====
 
-now prepare
+deprecated. use aa.
 
 
 ```js
-var asy = require('asy');
+var aa = require('aa');
 
-asy(function*() {
+aa(function*() {
   console.log('start');
-  yield asy.wait(1000);
+  yield aa.wait(1000);
   console.log('end after 1 second');
 });
 
-var thunkify = asy.thunkify;
+var thunkify = aa.thunkify;
 
 var fs = require('fs');
 var read = thunkify(fs.readFile);
@@ -21,7 +21,7 @@ var read = thunkify(fs.readFile);
 fs.readFile('README.md', function (err, res) {});
 read('README.md')(function (err, res) {});
 
-asy(function*() {
+aa(function*() {
   var buf = yield read('README.md');
 });
 ```
