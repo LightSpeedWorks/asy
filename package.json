@@ -1,7 +1,7 @@
 {
   "name": "asy",
-  "description": "asy now prepare",
-  "version": "0.0.1",
+  "description": "aa - async await",
+  "version": "0.0.2",
   "keywords": [
     "async"
   ],
@@ -10,11 +10,11 @@
     "email": "Kazuaki.Nishizawa@gmail.com",
     "url": "http://www.facebook.com/Kazuaki.Nishizawa"
   },
-  "main": "lib/asy",
+  "main": "asy.js",
   "engines": {
     "node": "*"
   },
-  "readme": "asy now prepare",
+  "readme": "aa - async await",
   "readmeFilename": "README.md",
   "license": "MIT",
   "devDependencies": {
@@ -22,5 +22,8 @@
     "thunkify": ">=2.1.2",
     "co": ">=4.5.2",
     "chan": ">=0.6.1"
+  },
+  "dependencies": {
+    "aa": "^0.1.7"
   }
 }
