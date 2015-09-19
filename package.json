@@ -1,29 +1,26 @@
 {
   "name": "asy",
   "description": "aa - async await",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [
     "async"
   ],
-  "author": {
-    "name": "LightSpeedC (Kazuaki Nishizawa)",
-    "email": "Kazuaki.Nishizawa@gmail.com",
-    "url": "http://www.facebook.com/Kazuaki.Nishizawa"
+  "dependencies": {
+    "aa": ">=0.1.9"
   },
-  "main": "asy.js",
-  "engines": {
-    "node": "*"
-  },
-  "readme": "aa - async await",
-  "readmeFilename": "README.md",
-  "license": "MIT",
   "devDependencies": {
     "mocha": ">=2.2.4",
     "thunkify": ">=2.1.2",
     "co": ">=4.5.2",
     "chan": ">=0.6.1"
   },
-  "dependencies": {
-    "aa": "^0.1.7"
-  }
+  "author": {
+    "name": "LightSpeedC (Kazuaki Nishizawa)",
+    "email": "Kazuaki.Nishizawa@gmail.com",
+    "url": "http://www.facebook.com/Kazuaki.Nishizawa"
+  },
+  "main": "asy.js",
+  "readme": "aa - async await",
+  "readmeFilename": "README.md",
+  "license": "MIT"
 }
