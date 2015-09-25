@@ -1,18 +1,18 @@
 {
   "name": "asy",
   "description": "aa - async await",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "keywords": [
     "async"
   ],
   "dependencies": {
-    "aa": ">=0.1.9"
+    "aa": ">=0.1.14"
   },
   "devDependencies": {
-    "mocha": ">=2.2.4",
-    "thunkify": ">=2.1.2",
-    "co": ">=4.5.2",
-    "chan": ">=0.6.1"
+    "chan": ">=0.6.1",
+    "co": ">=4.6.0",
+    "mocha": ">=2.3.3",
+    "thunkify": ">=2.1.2"
   },
   "author": {
     "name": "LightSpeedC (Kazuaki Nishizawa)",
